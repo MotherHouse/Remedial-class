@@ -1,0 +1,67 @@
+<include file="Index/header"/>
+<include file="Index/nav"/>
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+
+                        <form class="form-horizontal" id="rehe-form">
+                            <div class="form-group">
+                                <label for="inputname" class="col-sm-2 control-label">学生名字:</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="stu_id" class="form-control" id="inputname"  value="{$score.stu_id}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label">老师名字:</label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" name="tea_id" id="inputPassword3"  value="{$score.tea_id}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label">课程名字:</label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" name="class_name" id="inputPassword3"  value="{$score.class_name}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label">分数:</label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" name="score" id="inputPassword3"  value="{$score.score}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label">分数备注:</label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" name="score_remark" id="inputPassword3"  value="{$score.score_remark}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="button" class="btn btn-info btn-fill" onclick="formSubmit()">提交</button>
+                                </div>
+                            </div>
+
+                            <input type="hidden" name="id" value="{$score.id}" />
+                        </form>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <script>
+                var SCOPE = {
+                    'add_url' : 'admin.php?c=score&a=add',
+                    'success_url' : 'admin.php?c=score',
+                }
+            </script>
+
+            <include file="Index/tail"/>

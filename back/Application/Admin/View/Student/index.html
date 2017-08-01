@@ -1,0 +1,126 @@
+<include file="Index/header"/>
+<include file="Index/nav"/>
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">学生管理</h4>
+                            </div>
+                            <button onclick="skip()" type="submit" class="btn btn-info btn-fill" style="margin: 10px 15px;padding:7px 15px">添加</button>
+                            <div class="content table-responsive table-full-width">
+                                <form id="singcms-listorder">
+                                <table class="table table-hover table-striped singcms-table">
+                                    <thead>
+                                    <th width="14">排序</th>
+                                    <th>ID</th>
+                                    <th>姓名</th>
+                                    <th>年龄</th>
+                                    <th>年级</th>
+                                    <th>性别</th>
+                                    <th>电话</th>
+                                    <th>注册时间</th>
+                                    <th>照片</th>
+                                    <th>操作</th>
+                                    </thead>
+                                    <tbody>
+                                    <volist name="student" id="student">
+                                        <tr>
+                                            <td>
+                                                <input size="2" type="text" name="listorder[{$student.stu_id}]" value="{$student.listorder}"/>
+                                            </td>
+                                            <td>{$student.stu_id}</td>
+                                            <td>{$student.stu_name}</td>
+                                            <td>{$student.stu_age}</td>
+                                            <td>{$student.stu_grade}</td>
+                                            <td>{$student.stu_gender}</td>
+                                            <td>{$student.stu_tel}</td>
+                                            <td>{$student.stu_register_date}</td>
+                                            <td><a href="{$student.stu_photo_url}">点我查看</a></td>
+                                            <td>
+                                                <span class="pe-7s-note" id="rehe-edit" attr-id="{$student.stu_id}"></span>
+                                                <span class="pe-7s-close-circle" id="rehe-delete" attr-id="{$student.stu_id}" attr-message="删除"></span>
+                                            </td>
+                                        </tr>
+                                    </volist>
+
+                                    </tbody>
+                                </table>
+
+                                    <nav>
+                                        <ul>
+                                            {$pageRes}
+                                        </ul>
+                                    </nav>
+                                    <div>
+                                        <button onclick="listorder()" id="button-listorder" type="button" class="btn btn-info btn-fill" style="margin: 10px 15px;padding:7px 15px">更新排序</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav class="pull-left">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    联系我们
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <p class="copyright pull-right">
+                        &copy; <script>document.write(new Date().getFullYear())</script> wanglian four people
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+    var SCOPE = {
+        'skip_url' : 'admin.php?c=student&a=add',
+        'edit_url' :'admin.php?c=student&a=edit',
+        'set_status_url' : 'admin.php?c=student&a=setStatus',
+        'listorder_url' : 'admin.php?c=student&a=listorder'
+    }
+</script>
+
+<!--   Core JS Files   -->
+<script src="Public/assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="Public/assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!--  Checkbox, Radio & Switch Plugins -->
+<script src="Public/assets/js/bootstrap-checkbox-radio-switch.js"></script>
+
+<!--  Charts Plugin -->
+<script src="Public/assets/js/chartist.min.js"></script>
+
+<!--  Notifications Plugin    -->
+<script src="Public/assets/js/bootstrap-notify.js"></script>
+
+
+<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+<script src="Public/assets/js/light-bootstrap-dashboard.js"></script>
+
+<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+<script src="Public/assets/js/demo.js"></script>
+
+
+<script src="Public/js/dialog/layer.js"></script>
+<script src="Public/js/dialog.js"></script>
+<script src="Public/js/common.js"></script>
+
+</html>

@@ -1,0 +1,46 @@
+<include file="Index/header"/>
+<include file="Index/nav"/>
+<div class="content">
+    <div class="container-fluid">
+        <div class="typo-line">
+            <p class="category">{$tea.tea_name}</p>
+            <blockquote>
+                <p>
+                    {$tea.self_introduction}
+                </p>
+
+            </blockquote>
+        </div>
+
+        <div class="typo-line">
+            <p class="category"></p>
+            <blockquote>
+                <p>
+                    {$score.score_remark}
+                </p>
+
+            </blockquote>
+        </div>
+
+        <div class="typo-line">
+            <p class="category"></p>
+            <blockquote>
+                <p>
+                    {$comment.content}
+                </p>
+
+            </blockquote>
+        </div>
+
+
+        <div class="typo-line">
+            <p class="category">{$class.grade}-{$class.subject}-{$class.tea_id}</p>
+            <blockquote>
+                <p>
+                    <br /><br />
+                    {$class.class_introduction}
+                </p>
+
+            </blockquote>
+        </div>
+<include file="Index/tail"/>

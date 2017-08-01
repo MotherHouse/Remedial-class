@@ -1,0 +1,137 @@
+<include file="Index/header"/>
+<include file="Index/nav"/>
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">老师管理</h4>
+                            </div>
+                            <button onclick="skip()" type="submit" class="btn btn-info btn-fill" style="margin: 10px 15px;padding:7px 15px">添加</button>
+                            <div class="content table-responsive table-full-width">
+                                <form id="singcms-listorder">
+                                    <table class="table table-hover table-striped singcms-table">
+                                        <thead>
+                                        <th width="14">排序</th>
+                                        <th>ID</th>
+                                        <th>名字</th>
+                                        <th>性别</th>
+                                        <th>年龄</th>
+                                        <th>图片链接</th>
+                                        <th>自我介绍</th>
+                                        <th>电话</th>
+                                        <th>状态</th>
+                                        <th>操作</th>
+                                        </thead>
+                                        <tbody>
+                                        <volist name="teacher" id="teacher">
+                                            <tr>
+                                                <td>
+                                                    <input size="2" type="text" name="listorder[{$teacher.tea_id}]" value="{$teacher.listorder}"/>
+                                                </td>
+                                                <td>{$teacher.tea_id}</td>
+                                                <td>{$teacher.tea_name}</td>
+                                                <td>{$teacher.tea_gender}</td>
+                                                <td>{$teacher.tea_age}</td>
+                                                <td>
+                                                    <a href="{$teacher.tea_photo_url}">
+                                                        点我查看
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a id="rehe-detail"  attr-teaid="{$teacher.tea_id}">
+                                                        点我查看
+                                                    </a>
+                                                </td>
+                                                <td>{$teacher.tea_tel}</td>
+                                                <td><span attr-type="<if condition="$teacher['status'] eq 1">2<else/>1</if>"
+                                                    attr-id="{$teacher.tea_id}" class="sing_cursor singcms-on-off" id="singcms-on-off">
+                                                    {$teacher.status|getStatus}
+                                                </span></td>
+                                                <td>
+                                                    <span class="pe-7s-note" id="rehe-edit" attr-id="{$teacher.tea_id}"></span>
+                                                    <span class="pe-7s-close-circle" id="rehe-delete" attr-id="{$teacher.tea_id}" attr-message="删除"></span>
+                                                </td>
+                                            </tr>
+                                        </volist>
+
+                                        </tbody>
+                                    </table>
+
+                                    <nav>
+                                        <ul>
+                                            {$pageRes}
+                                        </ul>
+                                    </nav>
+                                    <div>
+                                        <button onclick="listorder()" id="button-listorder" type="button" class="btn btn-info btn-fill" style="margin: 10px 15px;padding:7px 15px">更新排序</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav class="pull-left">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    联系我们
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <p class="copyright pull-right">
+                        &copy; <script>document.write(new Date().getFullYear())</script> wanglian four people
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+    var SCOPE = {
+        'skip_url' : 'admin.php?c=admin&a=add',
+        'edit_url' :'admin.php?c=admin&a=edit',
+        'set_status_url' : 'admin.php?c=admin&a=setStatus',
+        'listorder_url' : 'admin.php?c=admin&a=listorder'
+    }
+</script>
+
+<!--   Core JS Files   -->
+<script src="Public/assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="Public/assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!--  Checkbox, Radio & Switch Plugins -->
+<script src="Public/assets/js/bootstrap-checkbox-radio-switch.js"></script>
+
+<!--  Charts Plugin -->
+<script src="Public/assets/js/chartist.min.js"></script>
+
+<!--  Notifications Plugin    -->
+<script src="Public/assets/js/bootstrap-notify.js"></script>
+
+
+<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+<script src="Public/assets/js/light-bootstrap-dashboard.js"></script>
+
+<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+<script src="Public/assets/js/demo.js"></script>
+
+
+<script src="Public/js/dialog/layer.js"></script>
+<script src="Public/js/dialog.js"></script>
+<script src="Public/js/common.js"></script>
+
+</html>

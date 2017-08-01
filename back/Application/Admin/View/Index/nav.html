@@ -1,0 +1,94 @@
+<?php
+    $menu = D("Menu")->getMenu();
+    $index = 'index';
+    $personal = 'personal';
+    $username = getLoginUsername();
+    foreach($menu as $key=>$value) {
+        if($value['c'] == 'admin' && $username != 'admin'){
+            unset($menu[$key]);
+        }
+
+        if($value['c'] == 'menu' && $username != 'admin'){
+        unset($menu[$key]);
+        }
+
+        if($value['c'] == 'comment' && $username != 'admin'){
+        unset($menu[$key]);
+        }
+
+        if($value['c'] == 'class' && $username != 'admin'){
+        unset($menu[$key]);
+        }
+
+        if($value['c'] == 'student' && $username != 'admin'){
+        unset($menu[$key]);
+        }
+    }
+?>
+
+
+<div class="wrapper">
+    <div class="sidebar" data-color="red" data-image="Public/assets/img/sidebar-5.jpg">
+
+        <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
+
+        <div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="#" class="simple-text">
+                    后台管理
+                </a>
+            </div>
+
+            <ul class="nav">
+                <li {$index|getActive}>
+                    <a href="admin.php">
+                        <i class="pe-7s-graph"></i>
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li {$personal|getActive1}>
+                    <a href="admin.php?c=admin&a=personal">
+                        <i class="pe-7s-user"></i>
+                        <p>个人中心</p>
+                    </a>
+                </li>
+                <volist name="menu" id="menu">
+                    <li {$menu.c|getActive}>
+                        <a href="admin.php?c={$menu.c}&a={$menu.a}">
+                            <i class="pe-7s-note2"></i>
+                            <p>{$menu.name}</p>
+                        </a>
+                    </li>
+                </volist>
+            </ul>
+        </div>
+    </div>
+
+<div class="main-panel">
+    <nav class="navbar navbar-default navbar-fixed">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">后台管理</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-left">
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="admin.php?c=login&a=loginout">
+                            <p>退出登录</p>
+                        </a>
+                    </li>
+                    <li class="separator hidden-lg hidden-md"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>

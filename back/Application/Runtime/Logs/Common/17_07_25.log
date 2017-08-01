@@ -1,0 +1,48 @@
+[ 2017-07-25T11:57:32+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-07-25T17:02:16+08:00 ] ::1 /git/weixin/tp3/Public/js/common.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+ERR: 无法加载模块:Public
+
+[ 2017-07-25T17:02:18+08:00 ] ::1 /git/weixin/tp3/Public/js/common.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+ERR: 无法加载模块:Public
+
+[ 2017-07-25T17:02:19+08:00 ] ::1 /git/weixin/tp3/Public/js/common.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000432s ]
+ERR: 无法加载模块:Public
+
+[ 2017-07-25T17:05:50+08:00 ] ::1 /git/weixin/tp3/Public/js/common.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+ERR: 无法加载模块:Public
+
+[ 2017-07-25T17:06:16+08:00 ] ::1 /git/weixin/tp3/Public/js/common.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+ERR: 无法加载模块:Public
+
+[ 2017-07-25T17:06:21+08:00 ] ::1 /git/weixin/tp3/index.php?m=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000513s ]
+ERR: 无法加载模块:Menu
+
+[ 2017-07-25T17:06:34+08:00 ] ::1 /git/weixin/tp3/Public/js/common.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+ERR: 无法加载模块:Public
+

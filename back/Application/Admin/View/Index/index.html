@@ -1,0 +1,55 @@
+<include file="Index/header" />
+<include file="Index/nav" />
+        <div class="content">
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">首页</h4>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5></h5>
+                                <a href="admin.php?c=admin">
+                                <div class="alert alert-info alert-with-icon" data-notify="container">
+                                    <button style="visibility: hidden" type="button" aria-hidden="true" class="close">×</button>
+                                    <span data-notify="icon" class="pe-7s-bell"></span>
+                                    <span data-notify="message" style="margin:10px;">待审核老师数量</span>
+                                    <span data-notify="message" style="margin:10px;">{$teaCount}</span>
+                                </div>
+                                </a>
+                                <a href="admin.php?c=comment">
+                                <div class="alert alert-info alert-with-icon" data-notify="container">
+                                    <button style="visibility: hidden" type="button" aria-hidden="true" class="close">×</button>
+                                    <span data-notify="icon" class="pe-7s-bell"></span>
+                                    <span data-notify="message" style="margin:10px;">待审核评价数量</span>
+                                    <span data-notify="message" style="margin:10px;">{$commentCount}</span>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <h5></h5>
+                                <a href="admin.php?c=class">
+                                <div class="alert alert-info alert-with-icon" data-notify="container">
+                                    <button style="visibility: hidden" type="button" aria-hidden="true" class="close">×</button>
+                                    <span data-notify="icon" class="pe-7s-bell"></span>
+                                    <span data-notify="message" style="margin:10px;">课程数量</span>
+                                    <span data-notify="message" style="margin:10px;">{$classCount}</span>
+                                </div>
+                                </a>
+                                <a href="admin.php?c=student">
+                                <div class="alert alert-info alert-with-icon" data-notify="container">
+                                    <button style="visibility: hidden" type="button" aria-hidden="true" class="close">×</button>
+                                    <span data-notify="icon" class="pe-7s-bell"></span>
+                                    <span data-notify="message" style="margin:10px;">学生数量</span>
+                                    <span data-notify="message" style="margin:10px;">{$studentCount}</span>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<include file="Index/tail" />
+
